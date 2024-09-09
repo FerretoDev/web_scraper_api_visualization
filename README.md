@@ -103,11 +103,3 @@ pytest
 ## Reflexión
 
 Este proyecto permitió integrar diversas técnicas, desde la automatización del scraping hasta la creación de visualizaciones de datos. A lo largo del desarrollo, fue esencial asegurar la estabilidad del scraping, la eficiencia en el procesamiento de datos, y la creación de una API robusta.
-
-## Contribuciones
-
-Si deseas contribuir a este proyecto, por favor, haz un fork del repositorio y envía un pull request. ¡Todas las contribuciones son bienvenidas!
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
