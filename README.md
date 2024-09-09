@@ -1,6 +1,3 @@
-### README.md (Raíz del Proyecto)
-
-```markdown
 # Web Scraper API Visualization with FastAPI
 
 Este proyecto es una aplicación que realiza web scraping, desarrolla una API y visualiza los datos extraídos utilizando FastAPI, Selenium, y Seaborn.
@@ -114,17 +111,3 @@ Si deseas contribuir a este proyecto, por favor, haz un fork del repositorio y e
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-```
-
-### Puntos Clave:
-
-- **Introducción:** Explica de manera clara el propósito del proyecto.
-- **Características:** Enumera las funcionalidades principales.
-- **Requisitos:** Indica lo que se necesita para ejecutar el proyecto.
-- **Instalación y Uso:** Proporciona pasos detallados para configurar y ejecutar la aplicación.
-- **Contenerización:** Incluye instrucciones para ejecutar la aplicación en Docker (si es aplicable).
-- **Estructura del Proyecto:** Ofrece una visión general de cómo está organizado el código.
-- **Pruebas:** Detalla cómo ejecutar las pruebas.
-- **Contribuciones y Licencia:** Proporciona información sobre cómo contribuir y los términos de la licencia.
-
-Este archivo será la guía principal para cualquier persona que desee entender, utilizar, o contribuir a tu proyecto, por lo que es crucial que sea detallado y fácil de seguir.
