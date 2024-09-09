@@ -1,0 +1,6 @@
+fastapi[all]
+selenium
+pandas
+seaborn
+beautifulsoup4
+pytest
