@@ -7,7 +7,9 @@ def scrape_data():
     driver = (
         webdriver.Chrome()
     )  # Asegúrate de tener Chromedriver instalado y configurado
-    driver.get("https://www.example.com")  # Cambia por la URL del sitio web
+    driver.get(
+        "https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2"
+    )  # Cambia por la URL del sitio web
 
     # Extraer datos usando Selenium (ejemplo)
     elements = driver.find_elements(
@@ -16,8 +18,7 @@ def scrape_data():
     data = []
 
     for element in elements:
-        row = [cell.text for cell in element.find_elements(By.TAG_NAME, "td")]
-        if row:
+        if row := [cell.text for cell in element.find_elements(By.TAG_NAME, "td")]:
             data.append(row)
 
     driver.quit()  # Cierra el navegador
