@@ -7,7 +7,7 @@ Este proyecto implementa una API con FastAPI para realizar scraping de datos y a
 1. Clona este repositorio.
 2. Instala las dependencias usando `pip install -r requirements.txt`.
 3. Configura `Chromedriver` y cualquier otra dependencia requerida.
-4. Ejecuta la aplicación usando `uvicorn app.main:app --reload`.
+4. Ejecuta la aplicación usando `fastapi dev app/main.py --reload`.
 
 ## Uso
 
