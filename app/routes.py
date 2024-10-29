@@ -1,11 +1,23 @@
-from fastapi import APIRouter
+from typing import List, Union
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
 
 from app.scraping.scraper import scrape_data  # Importar la función de scraping
 
 router = APIRouter()
 
 
-@router.get("/scrape")
+class DataItem(BaseModel):
+    key: str
+    value: Union[str, List[str]]
+
+
+class ScrapeResponse(BaseModel):
+    data: List[DataItem]
+
+
+@router.get("/scrape", response_model=ScrapeResponse)
 async def scrape_endpoint(url: str) -> dict[str, str]:
     """Handles the scraping of data from a specified URL via an HTTP GET request.
 
@@ -20,6 +32,15 @@ async def scrape_endpoint(url: str) -> dict[str, str]:
 
     try:
         data = scrape_data(url)  # Ejecutar la función de scraping
-        return {"data": data}
+        if not isinstance(data, list):
+            raise ValueError("Data returned from scraping must be a list.")
+
+        structured_data = [
+            {"key": item[0], "value": item[1]}
+            for item in data
+            if isinstance(item, list) and len(item) == 2
+        ]
+
+        return {"data": structured_data}
     except Exception as e:
-        return {"error": str(e)}
+        raise HTTPException(status_code=500, detail=str(e))
